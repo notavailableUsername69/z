@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Muli', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Update to column layout */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(#949c9e, #23242c);
+}
+
+.wrapper {
+    height: 270px;
+    width: 420px;
+    border-radius: 7px;
+    background-image: linear-gradient(to right, #787675, #404443);
+    padding: 30px 30px 35px;
+    transition: height 0.4s ease;
+    margin-top: 20px; /* Add margin-top to create space below the <h1> */
+}
+
+.wrapper.active {
+    height: 525px;
+}
+
+.camera-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Set the aspect ratio to 16:9 */
+    overflow: hidden;
+}
+
+.camera-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.camera-frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 0;
+    padding-bottom: 80%;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+}
+
+.switch {
+    margin-bottom: 10px; /* Add margin-bottom to create space below the switch button */
+    padding: 10px 20px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.details {
+    margin-top: 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s 0.5s ease;
+}
+
+.wrapper.active .details {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.details textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px 15px;
+    outline: none;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.details .buttons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.details .buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close {
+    background-color: #E83B61;
+}
+
+.copy {
+    background-color: #4CAF50;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px; /* Add margin-bottom to create space below the <h1> */
+}

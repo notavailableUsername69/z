@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="qq.css" />
+    <title>QR Code Reader</title>
+  </head>
+  <body>
+    <h1>QR Code Reader</h1>
+    <div class="wrapper">
+      <div class="camera-container">
+        <div class="camera-frame"></div>
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+      </div>
+      <button class="switch">Switch Camera</button>
+      <div class="details">
+        <textarea disabled id="textArea"></textarea>
+        <div class="buttons">
+          <button class="close">Close</button>
+          <button class="copy">Copy Text</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="toasts"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+    <script src="qq.js"></script>
+  </body>
+</html>
